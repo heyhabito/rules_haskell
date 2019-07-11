@@ -266,8 +266,8 @@ def get_extra_libs(hs, cc_info, dynamic = False, pic = None, fixup_dir = "_libs"
         elif lib_to_link.static_library and not pic_required:
             static_lib = lib_to_link.static_library
 
-        if dynamic_lib:
-            dynamic_lib = symlink_dynamic_library(hs, dynamic_lib, fixed_lib_dir)
+        #if dynamic_lib:
+        #    dynamic_lib = symlink_dynamic_library(hs, dynamic_lib, fixed_lib_dir)
         static_lib = mangle_static_library(hs, dynamic_lib, static_lib, fixed_lib_dir)
 
         if static_lib and not (dynamic and dynamic_lib):
